@@ -13,8 +13,8 @@ export class AdminLoginComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    $(document).ready(function () {
-      $('#btnLogin').click(function () {
+    $(document).ready(function () {    
+      $('#btnLogin').click(function () {    
         var email=$('#email').val();
         var password=$('#password').val()
         var at = email.indexOf("@");
@@ -32,13 +32,13 @@ export class AdminLoginComponent implements OnInit {
       }
       else if (at < 1 || (dot - at) < 2 || com < 1){
         $("#email").focus();
-        $('#msg').text("Enter valid email id");
+        $('#msg').text("Enter valid email id");   
         return false;
   }
     
         var data = {
           "email": $("#email").val(),
-          "password": $("#password").val()
+          "password": $("#password").val()   
         }
         console.log(data);
         $.ajax({

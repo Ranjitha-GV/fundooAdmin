@@ -5,14 +5,14 @@ import { AdminDashboardComponent } from '../components/admin-dashboard/admin-das
 
 
 const appRoutes: Routes = [
-{ path: 'admin-login', component: AdminLoginComponent },
-{ path: 'admin-dashboard', component: AdminDashboardComponent },
-
+{ path: 'admin-login', component: AdminLoginComponent }, 
+{ path: 'admin-dashboard', component: AdminDashboardComponent },  
+{ path: '', redirectTo: '/admin-login', pathMatch:'full'}
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes) 
   ],
     exports: [RouterModule]
 
