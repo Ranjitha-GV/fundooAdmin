@@ -13,6 +13,12 @@ export class AdminLoginComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    // var token;
+    if(localStorage.getItem('token'))
+    {
+      window.location.href = '/admin-dashboard';
+    }
+
     $(document).ready(function () {    
       $('#btnLogin').click(function () {    
         var email=$('#email').val();
@@ -60,4 +66,5 @@ export class AdminLoginComponent implements OnInit {
       })
     })
   }
+
 }

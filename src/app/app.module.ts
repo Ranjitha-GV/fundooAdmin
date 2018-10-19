@@ -4,7 +4,9 @@ import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { RouterModule, Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component'
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
     AppRoutingModule
 
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]    
 })
 

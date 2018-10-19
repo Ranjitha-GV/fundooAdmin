@@ -1,17 +1,20 @@
-<div class="container">
-  <div class="logout">
-    <a href="/admin-login"><button type="submit" class="btn btn-primary">LogOut</button></a>
-  </div>
-  <h1 class = "header" align = "center">
-    <span class="f">F</span>
-    <span class="u">u</span>
-    <span class="n">n</span>
-    <span class="d">d</span>
-    <span class="o">o</span>
-    <span class="oo">o</span>
-  </h1>
-  <h3 align = "center" class="header"><b>List of Users registered with Fundoo</b></h3>
-  <hr color="text-black">
+<div class="container-fluid">
+
+  <div class="card">
+
+    <h1 class="header" align="center">
+      <span class="f">F</span>
+      <span class="u">u</span>
+      <span class="n">n</span>
+      <span class="d">d</span>
+      <span class="o">o</span>
+      <span class="oo">o</span>
+    </h1>
+    <h3 align="center" class="header"><b>List of Users registered with Fundoo</b></h3>
+    <div class="logout">
+      <button type="submit" class="btn btn-dark" id="logout">LogOut</button>
+    </div>
+  </div> <br>
   <div align="center">
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
@@ -20,9 +23,9 @@
   </div>
   <br>
   <div class="col-sm-4"></div>
-  <table class="table pre-srollable" id="table1">
+  <table class="table pre-srollable table-hover" id="table1">
     <thead class="tableRow">
-      <tr>
+      <tr class = "table-row ">
         <th scope="col">Sl No.</th>
         <th scope="col">First Name</th>
         <th scope="col">Last Name</th>
@@ -32,3 +35,33 @@
     </thead>
   </table>
 </div>
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="modalPop" style="display:none">
+    Launch demo modal
+  </button>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            FirstName: <label id="firstName"></label><br>
+            LastName: <label id="lastName"></label><br>
+            Email ID: <label id="email"></label><br>
+            Role: <label id="role"></label><br>
+            Service Selected: <label id="service"></label><br>
+            Account created on: <label id="createdDate"></label><br>
+            Last Modified on: <label id="modifiedDate"></label><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

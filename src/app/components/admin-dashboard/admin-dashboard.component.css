@@ -18,6 +18,10 @@
 .oo{
     color:red;
 }
+.table-row
+{
+    cursor: pointer;
+}
 /* .card 
 {
         background-color: #F7F7F7;
@@ -36,8 +40,8 @@
 } */
 .header 
 {
-    margin-top: 20px;
-        color: black;
+    margin-top: 10px;
+        color: whitesmoke;
 }
 .tableRow 
 {
@@ -46,10 +50,30 @@
 }
 .logout 
 {
+    float: right;
     margin-top: 5px;
-    float:right;
+    padding-left: 93.88%;
+    
 }
 .cards 
 {
     margin-left: 20px;
+}
+.card 
+{
+    height: fit-content;
+    background-color: black;
+    /* text-transform: uppercase; */
+}
+.container-fluid
+{
+    height: 300px;
+    margin: 0 auto -4em;
+    margin-top: 10px;
+
+}
+.cards
+{
+        text-transform: uppercase;
+        
 }
