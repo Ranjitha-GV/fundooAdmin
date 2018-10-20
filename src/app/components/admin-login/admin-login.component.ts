@@ -16,7 +16,7 @@ export class AdminLoginComponent implements OnInit {
     // var token;
     if(localStorage.getItem('token'))
     {
-      window.location.href = '/admin-dashboard';
+      $(location).attr('href','admin-dashboard');
     }
 
     $(document).ready(function () {    
@@ -54,7 +54,7 @@ export class AdminLoginComponent implements OnInit {
           success: function (data) {
             console.log("success", data);
             localStorage.setItem("token",data.id);
-            window.location.href = "/admin-dashboard";
+            $(location).attr('href','admin-dashboard');
           },
           error: function (error) {
             console.log(error);

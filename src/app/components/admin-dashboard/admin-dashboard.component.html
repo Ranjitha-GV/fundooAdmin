@@ -1,7 +1,5 @@
 <div class="container-fluid">
-
   <div class="card">
-
     <h1 class="header" align="center">
       <span class="f">F</span>
       <span class="u">u</span>
@@ -11,7 +9,7 @@
       <span class="oo">o</span>
     </h1>
     <h3 align="center" class="header"><b>List of Users registered with Fundoo</b></h3>
-    <div class="logout">
+    <div class="logout" fxLayout = "column">
       <button type="submit" class="btn btn-dark" id="logout">LogOut</button>
     </div>
   </div> <br>
@@ -36,16 +34,17 @@
   </table>
 </div>
 
+<!-- Modal design -->
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="modalPop" style="display:none">
-    Launch demo modal
+    Modal
   </button>
   
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title" id="exampleModalLabel">User Details</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

@@ -21,7 +21,7 @@ export class AdminDashboardComponent implements OnInit {
             console.log("success", result);
             var list = [];
             for (var i = 0; i < result.data.data.length; i++) {
-              list.push([i+1, result.data.data[i].firstName, result.data.data[i].lastName, result.data.data[i].email, result.data.data[i].service])
+              list.push([i + 1, result.data.data[i].firstName, result.data.data[i].lastName, result.data.data[i].email, result.data.data[i].service])
             }
             var content = $('#table1').DataTable({
               data: list,
@@ -33,18 +33,18 @@ export class AdminDashboardComponent implements OnInit {
             $('#table1 tbody').on('click', 'tr', function () {
               var search = content.row(this).index();
               console.log(search);
-              console.log(result.data.data[search].firstName);
-              $("#firstName").text(result.data.data[search].firstName);
-              $("#lastName").text(result.data.data[search].lastName);
-              $("#email").text(result.data.data[search].email);
-              $("#role").text(result.data.data[search].role);
-              $("#service").text(result.data.data[search].service);
-              $("#createdDate").text(result.data.data[search].createdDate);
-              $("#modifiedDate").text(result.data.data[search].modifiedData);
+              var array = result.data.data;
+              console.log(array[search].firstName);
+              $("#firstName").text(array[search].firstName);
+              $("#lastName").text(array[search].lastName);
+              $("#email").text(array[search].email);
+              $("#role").text(array[search].role);
+              $("#service").text(array[search].service);
+              $("#createdDate").text(array[search].createdDate);
+              $("#modifiedDate").text(array[search].modifiedData);
 
               $("#modalPop").click();
-          } );
-            // this.index = -1
+            });
           },
           error: function (error) {
             console.log(error);
@@ -92,7 +92,8 @@ export class AdminDashboardComponent implements OnInit {
           },
           success: function () {
             localStorage.removeItem('token');
-            window.location.href = 'admin-login';
+            // window.location.href = 'admin-login';
+            $(location).attr('href','admin-login');
             console.log("Logout success");
           },
           error: function (error) {
