@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
+import { QuestionAdminComponent } from './components/question-admin/question-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    QuestionAdminComponent
   ],
   imports: [
     BrowserModule,

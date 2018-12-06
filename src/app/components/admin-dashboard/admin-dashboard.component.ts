@@ -12,6 +12,10 @@ export class AdminDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $("#butt").click(function(){
+      $(location).attr('href','question');
+    })
+
     $(document).ready(function () {
       $(function () {
         $.ajax({
